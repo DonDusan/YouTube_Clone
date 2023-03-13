@@ -1,0 +1,194 @@
+
+/* POSITION::::::::::::::::::::::::::::::::::
+ Very important: When we didnt have "Position: fixed;" our header takes space on the page
+and thats why we had background collor of white in this case. But no when it is floating 
+above the page we notise that it is transparent, because other elements whent up to take the space.
+You can just add the "background-color: to white"
+
+BORDER::::::::::::::::::::::
+-Another thing: Border-bottom-width: 1px;
+Border-bottom-color: gray
+border-bottom-style: solid
+*/
+
+
+.header {
+     height: 55px;
+     display: flex; 
+     flex-direction: row;
+     justify-content: space-between;
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     background-color: white;
+     border-bottom-width: 1px;
+     border-bottom-color: rgb(227, 220, 220);
+     border-bottom-style: solid;
+     z-index: 10;
+}
+
+/* Left-Section on the header */
+
+.left-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.hamburger-menu {
+     height: 24px;
+     width: 24px;
+     margin-right: 24px;
+     margin-left: 24px;
+     cursor: pointer;
+}
+
+.youtube-logo {
+     height: 20px;
+     width: 90px;
+     cursor: pointer;
+}
+
+/* Middle-Section on the header */
+
+.middle-section {
+     flex: 1;
+     margin-left: 70px;
+     margin-right: 35px;
+     max-width: 500px;
+     display: flex;
+     align-items: center;
+}
+
+/* Width: 0; - Search Bar have default width, this "width-0" will
+allow search bar to shrink as much as possible */
+
+.search-bar {
+     flex: 1;
+     height: 36px;
+     padding-left: 10px;
+     font-size: 16px;
+     border: 1px;
+     border-style: solid;
+     border-color: rgb(221, 214, 214);
+     border-radius: 2px;
+     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+     width: 0;
+}
+
+/* searh-bar::placeholder - That :: gives us options to target one element and get inside
+of it and mark another element that we can style */
+
+.search-bar::placeholder {
+     font-family: Roboto, Arial;
+     font-size: 16px;
+    
+}
+
+.search-button {
+     height: 40px;
+     width: 66px;
+     background-color: rgb(240, 240, 240);
+     border-width: 1px;
+     border-style: solid;
+     border-color: rgb(221, 214, 214);
+     margin-left: -1;
+     margin-right: 10px;
+
+     position: relative;
+
+     cursor: pointer;
+     
+}
+
+.search-button .tooltip {
+     position: absolute;
+     background-color: gray;
+     color: white;
+     padding: 4px 7px;
+     border-radius: 2px;
+     font-size: 12px;
+     bottom: -32px;
+     opacity: 0;
+     transition: opacity 0.20s;
+     pointer-events: none;
+}
+
+.search-button:hover .tooltip {
+     opacity: 1;
+}
+
+.search-icon {
+     height: 25px;
+     padding: 4px;
+}
+
+.voice-search-button {
+     height: 40px;
+     width: 40px;
+     border-radius: 20px;
+     border: none;
+     background-color: rgb(251, 251, 251);
+     cursor: pointer;
+}
+
+.voice-search-icon {
+     height: 24px;
+     margin-top: 4px;
+}
+
+/* Right-Section on the header. Flex-shrink: o; - Helps with right top side
+of the header not to "shrink" when minimizing the screen. It will stay fixed width */
+
+.right-section {
+     width: 180px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-right: 20px;
+     flex-shrink: 0;
+     padding-right: 8px;
+}
+
+.upload-icon {
+     height: 24px;
+     cursor: pointer;
+}
+
+.youtube-apps-icon {
+     height: 24px;
+     cursor: pointer;
+}
+
+
+.notification-icon {
+     height: 24px;
+     cursor: pointer;
+}
+
+.notifications-icon-container {
+     position: relative;
+
+}
+
+.notifications-count {
+     position: absolute;
+     top: -2px;
+     right: -5px;
+     background-color: rgb(187, 7, 7);
+     color: white;
+     font-family: Roboto, Arial;
+     font-size: 11px;
+     padding: 2px 5px;
+     border-radius: 10px;
+     cursor: pointer;
+
+}
+
+.current-user-picture {
+     height: 32px;
+     border-radius: 16px;
+     cursor: pointer;
+}
+
